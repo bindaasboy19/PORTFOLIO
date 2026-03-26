@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Smart Market Finder",
+    "description": "Find nearby markets, compare prices, and surface the most efficient shopping route through a fast mobile-friendly interface.",
+    "tech": ["React", "Node.js", "Express"],
+    "Status": "Ongoing"
+  },
+  {
+    "title": "LifeLedger",
+    "description": "A real time blood bank system concept focused on secure donor records, streamlined requests, and transparent inventory visibility.",
+    "tech": ["React", "Node.js", "MongoDB"],
+    "Status": "Ongoing"
+  },
+  {
+    "title": "PulseStack CRM",
+    "description": "A lightweight sales dashboard for managing leads, activity history, and pipeline progress with reusable UI patterns and modular scripts.",
+    "tech": ["JavaScript", "REST API", "CSS"],
+    "Status": "Ongoing"
+   
+  },
+  {
+    "title": "Portfolio",
+    "description": "A dynamic portfolio website showcasing projects, skills, and experience with a clean design and responsive layout.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/example/portfolio",
+    "live": "https://example.com/portfolio",
+    "Status": "Ongoing"
+
+  }
+]

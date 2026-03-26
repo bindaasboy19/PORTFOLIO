@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal portfolio of Sanjeev Chaurasia, B.Tech CSE student, web developer, and graphic designer."
+    />
+    <title>Sanjeev Chaurasia | Cinematic Portfolio</title>
+    <script>
+      document.documentElement.classList.add("js-enabled");
+
+      try {
+        const storedTheme = localStorage.getItem("portfolio-theme");
+
+        if (storedTheme === "light" || storedTheme === "dark") {
+          document.documentElement.dataset.theme = storedTheme;
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.dataset.theme = "dark";
+        }
+      } catch (error) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/theme.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/typing.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="boot-indicator" data-boot-indicator aria-live="polite">
+      <span class="boot-indicator__pulse" aria-hidden="true"></span>
+      <span class="boot-indicator__text">Loading...</span>
+    </div>
+
+    <div class="ambient-backdrop" aria-hidden="true">
+      <span class="ambient-orb ambient-orb--one"></span>
+      <span class="ambient-orb ambient-orb--two"></span>
+      <span class="ambient-orb ambient-orb--three"></span>
+      <div class="ambient-grid"></div>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <nav class="navbar container" aria-label="Primary">
+          <a class="brand" href="#home">
+            <span class="brand-mark">SC</span>
+            <span class="brand-copy">
+              <strong>Sanjeev Chaurasia</strong>
+              <span>Web Developer • Graphic Designer</span>
+            </span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-controls="site-nav"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="nav-panel" id="site-nav">
+            <ul class="nav-links">
+              <li><a class="nav-link active" href="#home">Home</a></li>
+              <li><a class="nav-link" href="#about">About</a></li>
+              <li><a class="nav-link" href="#responsibility">Responsibility</a></li>
+              <li><a class="nav-link" href="#projects">Projects</a></li>
+              <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+              <a class="resume-pill" href="assets/resume.pdf" download>
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                <span>Resume</span>
+              </a>
+
+              <button
+                class="theme-toggle"
+                type="button"
+                data-theme-toggle
+                aria-label="Toggle color theme"
+                aria-pressed="false"
+              >
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                <span class="sr-only">Toggle theme</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero section write-stage is-written" id="home" data-stage="0">
+          <div class="container">
+            <div class="section-shell hero-shell">
+              <div class="stage-content">
+                <div class="stage-topline">
+                  <span class="section-tag">Sanjeev Chaurasia</span>
+                  <span class="stage-pill">B.Tech CSE 2024-2028</span>
+                </div>
+
+                <div class="hero-grid">
+                  <div class="hero-copy">
+                    <p class="eyebrow" data-animate="fade-up">
+                      B.Tech CSE student, web developer, and graphic designer
+                    </p>
+
+                    <div class="hero-typing" aria-live="polite">
+                      <p class="hero-command">
+                        KIPM College of Engineering &amp; Technology | AKTU, Lucknow
+                      </p>
+
+                      <h1 class="hero-title">
+                        <span class="hero-line">
+                          <span data-typed-line="0"></span>
+                          <span class="line-caret" data-typed-caret="0" aria-hidden="true"></span>
+                        </span>
+                        <span class="hero-line hero-line--accent">
+                          <span data-typed-line="1"></span>
+                          <span class="line-caret" data-typed-caret="1" aria-hidden="true"></span>
+                        </span>
+                      </h1>
+
+                      <p class="hero-description">
+                        <span data-typed-line="2"></span>
+                        <span
+                          class="line-caret line-caret--inline"
+                          data-typed-caret="2"
+                          aria-hidden="true"
+                        ></span>
+                      </p>
+                    </div>
+
+                    <div class="hero-actions" data-hero-reveal>
+                      <a class="button button-primary" href="#projects">
+                        <i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+                        View Projects
+                      </a>
+                      <a class="button button-secondary" href="assets/resume.pdf" download>
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                        Download Resume
+                      </a>
+                    </div>
+
+                    
+                       <div class="social-links" data-hero-reveal aria-label="Social media links">
+                        <a class="social-link" href="mailto:csk1916313@gmail.com" aria-label="Email">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span>Email</span>
+                      </a>
+                      <a class="social-link" href="https://www.instagram.com/bindaasboy_alexsanjeev1913" target="_blank" rel="noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                      </a>
+                      <a class="social-link" href="https://www.facebook.com/bindaasboy.alexsanjeev1913" target="_blank" rel="noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                      </a>
+                      <a class="social-link" href="https://github.com/bindaasboy19" target="_blank" rel="noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                      </a>
+                      <a class="social-link" href="https://www.linkedin.com/in/sanjeev-chaurasia-8b419b2b6" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                      </a>
+                      <a class="social-link" href="https://twitter.com/Bindaasboy1913" target="_blank" rel="noreferrer" aria-label="X">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                      </a>
+                      <a class="social-link" href="https://youtube.com/@bindaasboy_alexsanjeev1913" target="_blank" rel="noreferrer" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                        <span>YouTube</span>
+                      </a>
+                    </div>
+
+                    <div class="hero-signals" data-hero-reveal>
+                      <article class="signal-card">
+                        <span class="signal-card__label">Interests</span>
+                        <strong>Generative AI, Web Development, Blockchain, and Graphic Design</strong>
+                      </article>
+                      <article class="signal-card">
+                        <span class="signal-card__label">Experience</span>
+                        <strong>Hackathons, collaborative projects, and active tech communities</strong>
+                      </article>
+                      <article class="signal-card">
+                        <span class="signal-card__label">Goal</span>
+                        <strong>Contributing to impactful projects while growing through real-world experience</strong>
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="hero-visual" data-hero-reveal data-animate="scale-in">
+                    <div class="hero-visual-card glass-card">
+                      <div class="hero-particles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+
+                      <div class="portrait-shell">
+                        <span class="floating-chip floating-chip--top">Open to work</span>
+                        <div class="portrait-ring">
+                          <img
+                            src="assets/images/profile.jpg"
+                            alt="Profile portrait for Sanjeev Chaurasia"
+                          />
+                        </div>
+                        <span class="floating-chip floating-chip--bottom">Based in India</span>
+                      </div>
+
+                      <div class="visual-terminal">
+                        <div class="visual-terminal__line">
+                          <span>Role</span>
+                          <strong>B.Tech CSE Student, Web Developer &amp; Graphic Designer</strong>
+                        </div>
+                        <div class="visual-terminal__line">
+                          <span>College</span>
+                          <strong>KIPM College of Engineering &amp; Technology, affiliated with AKTU, Lucknow</strong>
+                        </div>
+                        <div class="visual-terminal__line">
+                          <span>Approach</span>
+                          <strong>Innovation, creativity, teamwork, and practical problem solving</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about section write-stage" id="about" data-stage="1">
+          <div class="container">
+            <div class="section-shell">
+              <div class="stage-content">
+                <div class="section-heading" data-animate="fade-up">
+                  <p class="section-tag">About</p>
+                  <h2>Motivated by innovation, creativity, and solving real-world problems through technology.</h2>
+                  <p class="section-copy">
+                    I&apos;m a motivated and tech-driven B.Tech Computer Science and Engineering
+                    student focused on learning, building, and contributing to meaningful digital
+                    experiences.
+                  </p>
+                </div>
+
+                <div class="about-grid">
+                  <article class="glass-card about-card" data-animate="fade-up">
+                    <h3>Bio</h3>
+                    <p>
+                      I am currently pursuing B.Tech in Computer Science and Engineering
+                      (Batch 2024-2028) at KIPM College of Engineering &amp; Technology,
+                      affiliated with AKTU, Lucknow. I am passionate about leveraging technology
+                      for innovation, with strong interests in Generative AI, Web Development,
+                      Blockchain, and Graphic Design. Through hackathons, collaborative projects,
+                      and tech communities, I enjoy solving real-world problems with creativity,
+                      teamwork, and continuous learning.
+                    </p>
+
+                    <div class="bio-points">
+                      <div class="bio-point">
+                        <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+                        <span>Interested in Generative AI, Web Development, Blockchain, and Graphic Design</span>
+                      </div>
+                      <div class="bio-point">
+                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <span>Experienced in hackathons, collaborative projects, and tech communities</span>
+                      </div>
+                      <div class="bio-point">
+                        <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                        <span>Continuously learning new tools and technologies to grow and contribute</span>
+                      </div>
+                    </div>
+
+                    <a class="button button-secondary" href="assets/resume.pdf" download>
+                      <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                      Download Resume
+                    </a>
+                  </article>
+
+                  <article
+                    class="glass-card skills-card"
+                    data-animate="fade-up"
+                    style="--stagger-delay: 90ms"
+                  >
+                    <div class="card-heading">
+                      <h3>Skills</h3>
+                      <p>Areas I am exploring and strengthening through hands-on work.</p>
+                    </div>
+
+                    <div class="skills-cloud" aria-label="Skills">
+                      <span class="skill-chip">AI/ML</span>
+                      <span class="skill-chip">Generative AI</span>
+                      <span class="skill-chip">React</span>
+                      <span class="skill-chip">Graphic Design</span>
+                      <span class="skill-chip">Node.js</span>
+                      <span class="skill-chip">Problem Solving</span>
+                      <span class="skill-chip">MongoDB</span>
+                      <span class="skill-chip">Web Development</span>
+                      <span class="skill-chip">Leadership</span>
+                      <span class="skill-chip">Team Collaboration</span>
+                      <span class="skill-chip">Blockchain</span>
+                      <span class="skill-chip">Cybersecurity Awareness</span>
+                      <span class="skill-chip">JavaScript</span>
+                      <span class="skill-chip">Programming Fundamentals</span>
+                      
+                    </div>
+
+                    <div class="skill-meters">
+                      <div class="skill-meter">
+                        <div class="skill-meter__meta">
+                          <span>Web Development</span>
+                          <strong>92%</strong>
+                        </div>
+                        <div class="skill-meter__track">
+                          <span class="skill-meter__fill" style="--level: 92%"></span>
+                        </div>
+                      </div>
+
+                      <div class="skill-meter">
+                        <div class="skill-meter__meta">
+                          <span>Graphic Design</span>
+                          <strong>86%</strong>
+                        </div>
+                        <div class="skill-meter__track">
+                          <span class="skill-meter__fill" style="--level: 86%"></span>
+                        </div>
+                      </div>
+
+                      <div class="skill-meter">
+                        <div class="skill-meter__meta">
+                          <span>Emerging Tech &amp; Innovation</span>
+                          <strong>84%</strong>
+                        </div>
+                        <div class="skill-meter__track">
+                          <span class="skill-meter__fill" style="--level: 84%"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article
+                    class="glass-card timeline-card"
+                    data-animate="fade-up"
+                    style="--stagger-delay: 160ms"
+                  >
+                    <div class="card-heading">
+                      <h3>Education Timeline</h3>
+                      <p>A snapshot of my academic journey and growth in technology.</p>
+                    </div>
+
+                    <div class="timeline">
+                      <article class="timeline-item" data-animate="fade-left">
+                        <span class="timeline-year">2024 - 2028</span>
+                        <h4>B.Tech in Computer Science and Engineering</h4>
+                        <p>
+                          Studying at KIPM College of Engineering &amp; Technology, affiliated
+                          with AKTU, Lucknow, with a strong interest in innovation and practical
+                          technology applications.
+                        </p>
+                      </article>
+
+                      <article
+                        class="timeline-item"
+                        data-animate="fade-left"
+                        style="--stagger-delay: 120ms"
+                      >
+                        <span class="timeline-year">Present</span>
+                        <h4>Hackathons, Collaborative Projects &amp; Tech Communities</h4>
+                        <p>
+                          Gaining practical experience by working with teams, participating in
+                          challenges, and solving real-world problems through creativity and
+                          collaboration.
+                        </p>
+                      </article>
+
+                      <article
+                        class="timeline-item"
+                        data-animate="fade-left"
+                        style="--stagger-delay: 220ms"
+                      >
+                        <span class="timeline-year">Ongoing</span>
+                        <h4>Continuous Learning &amp; Skill Building</h4>
+                        <p>
+                          Continuously learning new tools and technologies in Generative AI,
+                          Web Development, Blockchain, and design to enhance technical proficiency
+                          and prepare for impactful industry work.
+                        </p>
+                      </article>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="responsibility section write-stage" id="responsibility" data-stage="2">
+          <div class="container">
+            <div class="section-shell">
+              <div class="stage-content">
+                <div class="section-heading" data-animate="fade-up">
+                  <p class="section-tag">Responsibility</p>
+                  <h2>Roles and responsibilities where I contribute beyond the classroom.</h2>
+                  <p class="section-copy">
+                    These experiences reflect my involvement in student communities, awareness
+                    initiatives, and practical development work.
+                  </p>
+                </div>
+
+                <div class="responsibility-grid">
+                  <article class="glass-card responsibility-card" data-animate="fade-up">
+                    <span class="responsibility-role">Social Media Subordinate</span>
+                    <h3>Ashtavakra Technical Society</h3>
+                    <p>
+                      Supporting social media presence, digital communication, and creative
+                      outreach for technical community activities.
+                    </p>
+                  </article>
+
+                  <article
+                    class="glass-card responsibility-card"
+                    data-animate="fade-up"
+                    style="--stagger-delay: 100ms"
+                  >
+                    <span class="responsibility-role">Cyber Saathi - Campus Ambassador</span>
+                    <h3>Naksh Foundation</h3>
+                    <p>
+                      Promoting awareness around cyber safety, digital responsibility, and student
+                      engagement through campus outreach.
+                    </p>
+                  </article>
+
+                  <article
+                    class="glass-card responsibility-card"
+                    data-animate="fade-up"
+                    style="--stagger-delay: 180ms"
+                  >
+                    <span class="responsibility-role">Web Developer Intern</span>
+                    <h3>ArmbhTech</h3>
+                    <p>
+                      Contributing to web development tasks, practical projects, and hands-on
+                      learning focused on real product workflows.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects section write-stage" id="projects" data-stage="3">
+          <div class="container">
+            <div class="section-shell">
+              <div class="stage-content">
+                <div class="section-heading" data-animate="fade-up">
+                  <p class="section-tag">Projects</p>
+                  <h2>Some of the projects I&apos;ve been building and refining.</h2>
+                  <p class="section-copy">
+                    A selection of work that reflects my interest in useful products, clean design,
+                    and thoughtful user experiences.
+                  </p>
+                </div>
+
+                <div class="projects-toolbar" data-animate="fade-up" style="--stagger-delay: 90ms">
+                  <div class="project-filters" id="project-filters" aria-label="Project filters"></div>
+                  <p class="projects-status" id="projects-status" aria-live="polite"></p>
+                </div>
+
+                <div class="projects-state is-loading" id="projects-state" aria-live="polite">
+                  <div class="loader" aria-hidden="true"></div>
+                  <p>Loading projects...</p>
+                </div>
+
+                <div class="projects-grid" id="projects-grid"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact section write-stage" id="contact" data-stage="4">
+          <div class="container">
+            <div class="section-shell">
+              <div class="stage-content">
+                <div class="section-heading" data-animate="fade-up">
+                  <p class="section-tag">Contact</p>
+                  <h2>Let&apos;s connect and build something meaningful together.</h2>
+                  <p class="section-copy">
+                    If you&apos;d like to collaborate, discuss an opportunity, or just say hello,
+                    feel free to send a message.
+                  </p>
+                </div>
+
+                <div class="contact-grid">
+                  <article class="glass-card contact-panel" data-animate="fade-up">
+                    <h3>Let&apos;s stay connected</h3>
+                    <p>
+                      I&apos;m always open to new opportunities, meaningful collaborations, and
+                      conversations around web development and product building.
+                    </p>
+
+                    <div class="contact-points">
+                      <article class="contact-point">
+                        <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                        <div>
+                          <h4>Work Opportunities</h4>
+                          <p>Open to freelance projects, internships, and full-time roles.</p>
+                        </div>
+                      </article>
+
+                      <article class="contact-point">
+                        <i class="fa-solid fa-users" aria-hidden="true"></i>
+                        <div>
+                          <h4>Collaboration</h4>
+                          <p>I enjoy working with teams that care about quality and impact.</p>
+                        </div>
+                      </article>
+
+                      <article class="contact-point">
+                        <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
+                        <div>
+                          <h4>Location</h4>
+                          <p>Based in India and comfortable collaborating remotely.</p>
+                        </div>
+                      </article>
+                    </div>
+                  </article>
+
+                  <form class="glass-card contact-form" id="contact-form" novalidate data-animate="fade-up" style="--stagger-delay: 90ms">
+                    <div class="form-field">
+                      <label for="name">Name</label>
+                      <input id="name" name="name" type="text" placeholder="Your name" required />
+                      <small class="form-error" aria-live="polite"></small>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="email">Email</label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="you@example.com"
+                        required
+                      />
+                      <small class="form-error" aria-live="polite"></small>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="message">Message</label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell me about your project, product, or idea"
+                        required
+                      ></textarea>
+                      <small class="form-error" aria-live="polite"></small>
+                    </div>
+
+                    <button class="button button-primary form-submit" type="submit">
+                      <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                      Send Message
+                    </button>
+                    <p class="form-feedback" id="form-feedback" role="status"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <p>Thanks for visiting my portfolio.</p>
+          <p>&copy; <span id="year"></span> Sanjeev Chaurasia. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
