@@ -22,9 +22,9 @@
     "title": "Portfolio",
     "description": "A dynamic portfolio website showcasing projects, skills, and experience with a clean design and responsive layout.",
     "tech": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/example/portfolio",
-    "live": "https://example.com/portfolio",
-    "Status": "Ongoing"
+    "github": "https://github.com/bindaasboy19/PORTFOLIO.git",
+    "live": "https://bindaasboy19.github.io/PORTFOLIO/",
+    "Status": "Completed"
 
   }
 ]
