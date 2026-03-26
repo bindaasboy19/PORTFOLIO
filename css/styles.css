@@ -302,11 +302,19 @@ html[data-theme="dark"] .site-header {
   height: 3rem;
   display: grid;
   place-items: center;
+  overflow: hidden;
+  padding: 0.12rem;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: #fff7f0;
-  font-weight: 700;
   box-shadow: var(--shadow-strong);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .brand-copy {
