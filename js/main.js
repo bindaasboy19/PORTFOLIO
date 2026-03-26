@@ -7,6 +7,7 @@
   const form = document.getElementById("contact-form");
   const feedback = document.getElementById("form-feedback");
   const year = document.getElementById("year");
+  const contactTimeField = document.getElementById("contact-time");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -130,6 +131,26 @@
     feedback.className = "form-feedback";
   };
 
+  const getEmailJsConfig = () => ({
+    serviceId: form?.dataset.emailjsServiceId?.trim() || "",
+    templateId: form?.dataset.emailjsTemplateId?.trim() || "",
+    publicKey: form?.dataset.emailjsPublicKey?.trim() || "",
+  });
+
+  const hasPlaceholderValue = (value) => !value || value.startsWith("YOUR_");
+
+  const isEmailJsConfigured = ({ serviceId, templateId, publicKey }) =>
+    !hasPlaceholderValue(serviceId) && !hasPlaceholderValue(templateId) && !hasPlaceholderValue(publicKey);
+
+  const populateContactMetadata = () => {
+    if (contactTimeField) {
+      contactTimeField.value = new Date().toLocaleString("en-IN", {
+        dateStyle: "medium",
+        timeStyle: "short",
+      });
+    }
+  };
+
   form?.querySelectorAll("input, textarea").forEach((field) => {
     field.addEventListener("input", () => {
       clearFieldError(field);
@@ -137,7 +158,7 @@
     });
   });
 
-  form?.addEventListener("submit", (event) => {
+  form?.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!feedback) {
@@ -178,13 +199,52 @@
     }
 
     const submitButton = form.querySelector(".form-submit");
+    const originalButtonMarkup = submitButton?.innerHTML || "";
+    const emailJsConfig = getEmailJsConfig();
+
+    if (!window.emailjs || typeof window.emailjs.sendForm !== "function") {
+      feedback.textContent = "Email service failed to load. Please try again later.";
+      feedback.classList.add("is-error", "is-visible");
+      return;
+    }
+
+    if (!isEmailJsConfigured(emailJsConfig)) {
+      feedback.textContent =
+        "EmailJS is not configured yet. Add your service ID, template ID, and public key in the contact form.";
+      feedback.classList.add("is-error", "is-visible");
+      return;
+    }
+
+    populateContactMetadata();
     submitButton?.setAttribute("disabled", "true");
 
-    window.setTimeout(() => {
+    if (submitButton) {
+      submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
+    }
+
+    try {
+      await window.emailjs.sendForm(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        form,
+        {
+          publicKey: emailJsConfig.publicKey,
+        }
+      );
+
       form.reset();
-      submitButton?.removeAttribute("disabled");
-      feedback.textContent = "Message sent successfully. Thanks for reaching out.";
+      populateContactMetadata();
+      feedback.textContent = "Message sent successfully. Check your inbox for EmailJS delivery.";
       feedback.classList.add("is-success", "is-visible");
-    }, prefersReducedMotion ? 120 : 520);
+    } catch (error) {
+      console.error("EmailJS send failed:", error);
+      feedback.textContent = "Message could not be sent right now. Please try again in a moment.";
+      feedback.classList.add("is-error", "is-visible");
+    } finally {
+      submitButton?.removeAttribute("disabled");
+      if (submitButton) {
+        submitButton.innerHTML = originalButtonMarkup;
+      }
+    }
   });
 })();

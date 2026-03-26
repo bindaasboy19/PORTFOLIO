@@ -34,6 +34,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/theme.js" defer></script>
     <script src="js/animations.js" defer></script>
     <script src="js/typing.js" defer></script>
@@ -549,10 +550,29 @@
                     </div>
                   </article>
 
-                  <form class="glass-card contact-form" id="contact-form" novalidate data-animate="fade-up" style="--stagger-delay: 90ms">
+                  <form
+                    class="glass-card contact-form"
+                    id="contact-form"
+                    novalidate
+                    data-animate="fade-up"
+                    data-emailjs-service-id="service_mk8nyr1"
+                    data-emailjs-template-id="template_xs38su8"
+                    data-emailjs-public-key="Nn6x25agiqxZpl3bf"
+                    style="--stagger-delay: 90ms"
+                  >
+                    <input type="hidden" name="title" value="Portfolio Contact Message" />
+                    <input type="hidden" name="source" value="Sanjeev Portfolio Website" />
+                    <input type="hidden" name="time" id="contact-time" value="" />
+
                     <div class="form-field">
                       <label for="name">Name</label>
-                      <input id="name" name="name" type="text" placeholder="Your name" required />
+                      <input
+                        id="name"
+                        name="from_name"
+                        type="text"
+                        placeholder="Your name"
+                        required
+                      />
                       <small class="form-error" aria-live="polite"></small>
                     </div>
 
@@ -560,7 +580,7 @@
                       <label for="email">Email</label>
                       <input
                         id="email"
-                        name="email"
+                        name="reply_to"
                         type="email"
                         placeholder="you@example.com"
                         required

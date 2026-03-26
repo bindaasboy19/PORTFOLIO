@@ -80,6 +80,29 @@ python3 -m http.server 8000
 
 3. Open `http://localhost:8000` in your browser.
 
+## EmailJS Setup
+
+To make the contact form send real emails:
+
+1. Create an EmailJS account and connect an email service.
+2. Create an email template in EmailJS.
+3. Open [index.html](/Users/sanjeevchaurasia/ArmbhTech/Portfolio/index.html) and replace these form attributes:
+
+```html
+data-emailjs-service-id="YOUR_SERVICE_ID"
+data-emailjs-template-id="YOUR_TEMPLATE_ID"
+data-emailjs-public-key="YOUR_PUBLIC_KEY"
+```
+
+4. In your EmailJS template, use these variables:
+
+- `{{from_name}}`
+- `{{reply_to}}`
+- `{{message}}`
+- `{{title}}`
+- `{{source}}`
+- `{{time}}`
+
 ## Editing `projects.json`
 
 Each project object can include:
