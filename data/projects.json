@@ -1,26 +1,5 @@
 [
   {
-    "title": "Smart Market Finder",
-    "description": "Find nearby markets, compare prices, and surface the most efficient shopping route through a fast mobile-friendly interface.",
-    "tech": ["React", "Node.js", "Express"],
-    "Status": "Ongoing"
-  },
-  {
-    "title": "LifeLedger",
-    "description": "An intelligent blood bank management and donor coordination platform designed to bridge the critical gap between blood donors, hospitals, and NGOs.",
-    "tech": ["React", "Node.js", "MongoDB"],
-    "github": "https://github.com/bindaasboy19/LifeLedger.git",
-    "live": "https://life-ledger-rose.vercel.app/",
-    "Status": "Completed"
-  },
-  {
-    "title": "PulseStack CRM",
-    "description": "A lightweight sales dashboard for managing leads, activity history, and pipeline progress with reusable UI patterns and modular scripts.",
-    "tech": ["JavaScript", "REST API", "CSS"],
-    "Status": "Ongoing"
-   
-  },
-  {
     "title": "Portfolio",
     "description": "A dynamic portfolio website showcasing projects, skills, and experience with a clean design and responsive layout.",
     "tech": ["HTML", "CSS", "JavaScript"],
@@ -28,5 +7,34 @@
     "live": "https://bindaasboy19.github.io/PORTFOLIO/",
     "Status": "Completed"
 
+  },
+  {
+    "title": "LifeLedger",
+    "description": "An intelligent blood bank management and donor coordination platform designed to bridge the critical gap between blood donors, hospitals, and NGOs.",
+    "tech": ["React", "Node.js", "MongoDB","Firebase","Python"],
+    "github": "https://github.com/bindaasboy19/LifeLedger.git",
+    "live": "https://life-ledger-rose.vercel.app/",
+    "Status": "Completed"
+  },
+  {
+    "title": "CyberSaathi",
+    "description": "An intelligent web platform designed to help users understand, prevent, and respond to cybercrime. It combines AI-driven assistance, real-time guidance, community support, and legal awareness to provide practical solutions for cyber threats, especially for Indian users.",
+    "tech": ["Next.js", "Firebase", "OpenAI API"],
+    "Status": "Ongoing"
+  },
+  {
+    "title": "Smart Market Finder",
+    "description": "Find nearby markets, compare prices, and surface the most efficient shopping route through a fast mobile-friendly interface.",
+    "tech": ["React", "Node.js", "Express"],
+    "Status": "Ongoing"
+  },
+  
+  {
+    "title": "PulseStack CRM",
+    "description": "A lightweight sales dashboard for managing leads, activity history, and pipeline progress with reusable UI patterns and modular scripts.",
+    "tech": ["JavaScript", "REST API", "CSS"],
+    "Status": "Ongoing"
+   
   }
+  
 ]
