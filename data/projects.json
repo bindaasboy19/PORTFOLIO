@@ -7,9 +7,11 @@
   },
   {
     "title": "LifeLedger",
-    "description": "A real time blood bank system concept focused on secure donor records, streamlined requests, and transparent inventory visibility.",
+    "description": "An intelligent blood bank management and donor coordination platform designed to bridge the critical gap between blood donors, hospitals, and NGOs.",
     "tech": ["React", "Node.js", "MongoDB"],
-    "Status": "Ongoing"
+    "github": "https://github.com/bindaasboy19/LifeLedger.git",
+    "live": "https://life-ledger-rose.vercel.app/",
+    "Status": "Completed"
   },
   {
     "title": "PulseStack CRM",

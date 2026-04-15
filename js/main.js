@@ -234,7 +234,7 @@
 
       form.reset();
       populateContactMetadata();
-      feedback.textContent = "Message sent successfully. Check your inbox for EmailJS delivery.";
+      feedback.textContent = "Message sent successfully. I'll get back to you as soon as I can.";
       feedback.classList.add("is-success", "is-visible");
     } catch (error) {
       console.error("EmailJS send failed:", error);
