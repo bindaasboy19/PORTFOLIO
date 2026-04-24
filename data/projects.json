@@ -17,6 +17,14 @@
     "Status": "Completed"
   },
   {
+    "title": "JanVote AI",
+    "description": "An Intelligent Election Education Assistant designed to empower, educate & encourage people to vote. ",
+    "tech": ["React","Tailwind CSS", "Node.js", "Firebase","Gemini API"],
+    "Status": "Completed",
+    "github": "https://github.com/bindaasboy19/JanVote-AI.git",
+    "live": "https://janvote-ai-393071020858.us-central1.run.app/"
+  },
+  {
     "title": "CyberSaathi",
     "description": "An intelligent web platform designed to help users understand, prevent, and respond to cybercrime. It combines AI-driven assistance, real-time guidance, community support, and legal awareness to provide practical solutions for cyber threats, especially for Indian users.",
     "tech": ["Next.js", "Firebase", "OpenAI API"],
