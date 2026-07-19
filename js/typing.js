@@ -22,7 +22,7 @@
       pauseAfter: 200,
     },
     {
-      text: "B.Tech CSE student at KIPM College, exploring Generative AI, Blockchain, and real-world problem solving through projects and communities.",
+      text: "B.Tech CSE student at KIPM College, exploring Generative AI, Blockchain, CyberSecurity, and real-world problem solving through projects and communities.",
       baseSpeed: 26,
       variance: 18,
       pauseAfter: 0,
